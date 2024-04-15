@@ -11,17 +11,18 @@
 </head>
 
 <body>
-    <form action="main.html" method="post">
-        <label for="name">Ваше имя</label>
-        <input type="text" id="name" name="userName" placeholder="Имя">
+    <form action="main.html" enctype="multipart/form-data" method="post" name="taskform">
+        <label for="name">ФИО</label>
+        <input type="text" id="name" name="userName" required placeholder="Имя" minlength="2" maxlength="20">
 
-        <label for="phone">Номер телефона</label>
-        <input type="tel" id="phone" name="userPhone" placeholder="+7 (___) ___ - __ - __">
+        <label for="phone">Телефон</label>
+        <input type="tel" class="tel" id="phone" name="userPhone" required placeholder="+7 (___) ___ ____">
+        <script src="js/phoneNumber.js"></script>
         
-        <label for="mail">Адрес электронной почты</label>
+        <label for="mail">E-mail</label>
         <input type="email" id="mail" name="userMail" placeholder="user@example.com">
         
-        <label for="mail">Файл</label>
+        <label for="documents">Файл</label>
         <label class="inputFile">
             <input type="file" name="file" id="documents" accept=".doc, .docx, .pdf"/>
             <span class="inputFileBtn">Выберите файл</span>
@@ -45,7 +46,7 @@
                   </div>
                </div>
    
-               <input type="range" class="range__input" id="range-input" min="20" max="80" value="40" step="1">
+               <input type="range" class="range__input" id="range-input" required min="20" max="80" value="40" step="1">
             </div>
          </div>
 
