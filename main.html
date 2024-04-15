@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <form action="main.html" method="post">
+        <label for="name">Ваше имя</label>
+        <input type="text" id="name" name="userName" placeholder="Имя">
+
+        <label for="phone">Номер телефона</label>
+        <input type="tel" id="phone" name="userPhone" placeholder="+7 (___) ___ - __ - __">
+        
+        <label for="mail">Адрес электронной почты</label>
+        <input type="email" id="mail" name="userMail" placeholder="user@example.com">
+        
+        <label for="mail">Файл</label>
+        <label class="inputFile">
+            <input type="file" name="file" id="documents" accept=".doc, .docx, .pdf"/>
+            <span class="inputFileBtn">Выберите файл</span>
+            <span class="inputFileTxt">Не более 5Мб</span>
+        </label>
+        <script src="js/fileBtn.js"></script>
+
+        <label for="birth">Дата</label>
+        <input type="date" id="birth" name="birthDate" value="YYYY-MM-DD" min="1900-01-01" />
+        
+        <label for="birth">Количество</label>
+        <div class="range">
+            <div class="range__content">
+               <div class="range__slider">
+                  <div class="range__slider-line" id="range-line"></div>
+               </div>
+               
+               <div class="range__thumb" id="range-thumb">
+                  <div class="range__value">
+                     <span class="range__value-number" id="range-number">40</span>
+                  </div>
+               </div>
+   
+               <input type="range" class="range__input" id="range-input" min="20" max="80" value="40" step="1">
+            </div>
+         </div>
+
+        <script src="js/range.js"></script>
+  
+        <button type="submit" class="submitBtn">Отправить</button>
+    </form>
+</body>
