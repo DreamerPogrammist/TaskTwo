@@ -216,3 +216,23 @@
   .inputFile input[type=file]:disabled + .inputFileBtn {
     background-color: #eee;
   }
+
+  #form .inputBox .indicator{
+    position: absolute;
+    margin-top: 20px;
+    margin-inline-start: -35px;
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+  #form.invalid .inputBox .indicator{
+  background: #be2e18;
+  
+}
+
+  #form.valid .inputBox .indicator{
+  background: #0f868c;
+
+}
